@@ -9,7 +9,7 @@ export function Converter() {
 
     const [activeColor, setActiveColor] = useState('#33495f');
 
-    const onkeydown = (e) => {
+    const onkeyup = (e) => {
         const inputValue = e.target.value.trim();
         if (inputValue[0] === '#' && inputValue.length === 7) {
             if (validateHex(inputValue)) {
@@ -32,7 +32,7 @@ export function Converter() {
         <div className={'Converter'} style={{backgroundColor: activeColor}}>
             <Form
                 onSubmit={onSubmit}
-                onKeyDown={onkeydown}
+                onKeyUp={onkeyup}
                 rgb={rgb}
             />
         </div>
