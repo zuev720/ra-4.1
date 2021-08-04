@@ -4,8 +4,8 @@ import './Form.css';
 export function Form(props) {
     return (
         <form className={'Form'} onSubmit={props.onSubmit}>
-            <input onChange={props.onChange} value={props.state.hex} className={'input'} type="text" name={'hex'} />
-            <div className={'rgb-block'}>{props.state.rgb}</div>
+            <input className={'input'} type="text" name={'hex'} onKeyDown={props.onKeyDown}/>
+            <div className={'rgb-block'}>{props.rgb}</div>
         </form>
     )
 }
